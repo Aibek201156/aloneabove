@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>AloneAbove — Shop</title>
+
+  <!-- Telegram WebApp SDK -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── HEADER ─────────────────────────────────────────────────── -->
+  <header class="site-header">
+    <div class="header-inner">
+      <span class="logo-wordmark">ALONE<span class="accent">ABOVE</span></span>
+      <span class="header-tagline">STREETWEAR / DROP 001</span>
+    </div>
+    <div class="header-line"></div>
+  </header>
+
+  <!-- ── MAIN ──────────────────────────────────────────────────── -->
+  <main>
+    <section class="section-label">
+      <span>— КАТАЛОГ</span>
+      <span id="item-count" class="item-count">0 позиций</span>
+    </section>
+
+    <div id="product-grid" class="product-grid">
+      <!-- карточки вставляются через JS -->
+    </div>
+  </main>
+
+  <!-- ── TOAST ─────────────────────────────────────────────────── -->
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <!-- ── PRODUCT DATA ───────────────────────────────────────────
+       Если бот не передаёт данные через initData, товары берутся
+       из этого массива — можно синхронизировать с config.json вручную.
+  ──────────────────────────────────────────────────────────────── -->
+  <script id="products-data" type="application/json">
+    [
+      {
+        "id": 1,
+        "name": "Оверсайз Худи «VOID»",
+        "price": 4990,
+        "description": "Тяжёлый хлопок 420г/м². Дроп-плечо, объёмный капюшон. Цвет: Onyx Black.",
+        "emoji": "🖤"
+      },
+      {
+        "id": 2,
+        "name": "Лонгслив «SIGNAL»",
+        "price": 3490,
+        "description": "Рибана 240г/м². Принт на спине. Цвет: Ash White.",
+        "emoji": "🤍"
+      },
+      {
+        "id": 3,
+        "name": "Карго «ABOVE»",
+        "price": 6990,
+        "description": "Twill 300г/м². 6 карманов, зауженный крой. Цвет: Graphite.",
+        "emoji": "🩶"
+      },
+      {
+        "id": 4,
+        "name": "Бейсболка «ALONE»",
+        "price": 1990,
+        "description": "6-панельная, нерегулируемая. Вышивка. Цвет: Black/White.",
+        "emoji": "🧢"
+      }
+    ]
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
